@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import {
   StyleSheet, Text, View, TouchableNativeFeedback, Platform,
 } from 'react-native'
-import { LinearGradient, Notifications } from 'expo'
+import { LinearGradient } from 'expo-linear-gradient'
+import { Notifications} from 'expo'
 import { createStackNavigator } from 'react-navigation'
 import { Ionicons } from '@expo/vector-icons' // eslint-disable-line
 import { fromLeft } from 'react-navigation-transitions'
