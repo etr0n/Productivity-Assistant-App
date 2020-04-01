@@ -28,3 +28,5 @@ var sharedBlacklist = [
 ];
 
 ### Stengiausi uzsaugoti viska, bet gali buti, kad praleidau sita failiuka po keletos bandymu ikelti projekta
+
+https://github.com/HumanExposure/factotum/wiki/Git-Branch-Strategy <= Labai svarbu jeigu kazka pakeisit tai kita brancha butinai kurkit nedekit i masteri.
