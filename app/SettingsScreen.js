@@ -13,7 +13,7 @@ import ActivityModal from './ActivityModal'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#375e97',
+    backgroundColor: '#100414',
   },
   activityContainer: {
     flex: 1,
@@ -310,7 +310,7 @@ class SettingsScreen extends React.Component {
         </View>
         <View style={styles.header}>
           <Text style={styles.headerText}>
-            Misc
+            About
           </Text>
         </View>
         <TouchableOpacity
@@ -330,7 +330,7 @@ class SettingsScreen extends React.Component {
           <View style={styles.activityContainer}>
             <View style={styles.item}>
               <Text style={styles.itemText}>
-                About Pomodoro Go
+                About Productivity Assistant
               </Text>
             </View>
           </View>
@@ -339,7 +339,7 @@ class SettingsScreen extends React.Component {
           <View style={styles.activityContainer}>
             <View style={styles.item}>
               <Text style={styles.itemText}>
-                &nbsp;
+                ?
               </Text>
             </View>
           </View>

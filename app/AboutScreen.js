@@ -44,9 +44,7 @@ class AboutScreen extends React.Component {
         <View>
           <Text style={styles.normalText}>
             {'\n'}
-            by Paul Hoskinson (
-            <Anchor style={styles.anchor} href="mailto:plhosk@gmail.com">plhosk@gmail.com</Anchor>
-            )
+           
             {'\n\n'}
             View this project on&nbsp;
             <Anchor style={styles.anchor} href="https://github.com/plhosk/pomodoro-go">GitHub</Anchor>

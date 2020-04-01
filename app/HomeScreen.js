@@ -316,7 +316,7 @@ class HomeScreen extends React.Component {
       <View style={styles.container}>
         <LinearGradient
           style={styles.centeredContainer}
-          colors={['#375e97', '#34675c']}
+          colors={['#1b0921', '#773082']}
         >
           <View style={styles.centeredContainer}>
             <View style={styles.top}>
@@ -411,7 +411,7 @@ export default createStackNavigator({
 }, {
   navigationOptions: {
     headerStyle: {
-      backgroundColor: '#375e97',
+      backgroundColor: '#100414',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
