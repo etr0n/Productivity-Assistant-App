@@ -5,11 +5,10 @@ import colors from "./Colors";
 import tempData from "./TempData";
 
 export default class AddListModal extends React.Component {
-    backgroundColors = ["#000000", "#02111F", "#031E36", "#0C2840", "#182C3D", "#444C5C"];
     
     state = {
         name: "",
-        color: this.backgroundColors[0]
+        color: colors.darkgreyblue
     };
 
     createTask = () => {
@@ -28,7 +27,7 @@ export default class AddListModal extends React.Component {
             return (
                 <TouchableOpacity 
                 key={color} 
-                style={[styles.colorSelect, {backgroundColor: color}]} 
+                style={[styles.colorSelect, {backgroundColor: [0]}]}
                 onPress={() => this.setState({ color })} 
                 />
              );
@@ -47,18 +46,14 @@ export default class AddListModal extends React.Component {
 
                     <TextInput 
                     style={[styles.input, {backgroundColor: colors.grey}]}
-                    placeholder="LIST NAME?" 
+                    placeholder="PROJECT NAME?" 
                     placeholderTextColor = "#BFBFBF" 
                     onChangeText={text => this.setState({ name: text })} 
                     autoCapitalize="characters"
                     />
 
-                    <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-                        {this.renderColors()}
-                    </View>
-
                     <TouchableOpacity 
-                    style={[styles.create, {backgroundColor: this.state.color}]} 
+                    style={[styles.create, {backgroundColor: colors.darkgreyblue}]} 
                     onPress={this.createTask}
                     >
                         <Text style={{color: colors.lightGrey, fontWeight: "600", fontSize: 16}}>CREATE</Text>

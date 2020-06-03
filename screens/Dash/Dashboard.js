@@ -143,9 +143,10 @@ export default class Dashboard extends React.Component {
     this.setState({
       runtime: this.state.busyTime * 60,
       activeTimerType: timerType.busyTimer
-     /*  message: 'Great work, keep on going!' */
+     /*  message: 'Great work!' */
     })
-    // set update to 1s interval
+
+    // update priskirti pirmam intervalui
     this.interval = setInterval(this.incrementTimer, 1000)
     this.pomodoroActive = true
   }
@@ -201,7 +202,7 @@ export default class Dashboard extends React.Component {
         }
       })
 
-    // set pomodoro pause if the timer is active
+    //  Jeigu timeris aktyvus tada pomodoro pause
     } else {
       clearInterval(this.interval)
       this.prevTimerType = this.state.activeTimerType
@@ -212,7 +213,7 @@ export default class Dashboard extends React.Component {
     }
   } 
 
-  // switches between break, active, and vice-versa
+  // keicia tarp  break ir active stateu
   switchPomodoroState() {
     if (this.pomodoroActive) {
       if (this.state.activeTimerType == timerType.busyTimer) {
@@ -220,7 +221,7 @@ export default class Dashboard extends React.Component {
       } else {
         this.setPomodoroBusyState()
       }
-      // let the user know that the timer has ran out
+      // leidzia varotojui suzinoti kada laikas pasibaige t.y vibruoja
       //vibrate()
     } else {
       this.startPomodoro()

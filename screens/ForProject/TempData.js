@@ -1,10 +1,12 @@
-// laikini duomenys iki duombazes sukurimo "Firebase"
+// laikini duomenys iki duombazes sukurimo 
+
+import colors from "./Colors";
 
 export default tempData = [
     {
         id: 1,
         name: "PROJECT1",
-        color: "#02111F",
+        color: colors.darkgreyblue,
         tasks: [
             {
                 title: "cp1",
@@ -28,7 +30,7 @@ export default tempData = [
     {
         id: 2,
         name: "PROJECT2",
-        color: "#444C5C",
+        color: colors.darkgreyblue,
         tasks: [
             {
                 title: "cp2",
@@ -48,7 +50,7 @@ export default tempData = [
     {
         id: 3,
         name: "PROJECT3",
-        color: "#031E36",
+        color: colors.darkgreyblue,
         tasks: [
             {
                 title: "cp3",
@@ -67,7 +69,5 @@ export default tempData = [
                 completed: false
             } 
         ]
-
-
     }
 ];
