@@ -15,11 +15,16 @@ import { Block, Button, Text } from 'expo-ui-kit';
 import { LinearGradient } from 'expo-linear-gradient';
 
 // screens
-import Dashboard from '../screens/Dashboard';
-import Schedule from '../screens/Schedule';
-import Settings from '../screens/Settings';
+import Dashboard from '../screens/Dash/Dashboard';
+
+import Schedule from '../screens/Schedule/Schedule';
+import ScheduleDays from '../screens/Schedule/ScheduleDays';
+import ScheduleHours from '../screens/Schedule/ScheduleHours';
+import ScheduleInfo from '../screens/Schedule/ScheduleInfo';
+
+import Settings from '../screens/Settings/Settings';
 import Projects from '../screens/Projects';
-import Statistics from '../screens/Statistics';
+import About from '../screens/About';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -40,8 +45,11 @@ const Screens = ({ navigation, style }) => {
         <Stack.Screen name="Home">{props => <Dashboard {...props} />}</Stack.Screen>
         <Stack.Screen name="Projects">{props => <Projects {...props} />}</Stack.Screen>
         <Stack.Screen name="Schedule">{props => <Schedule {...props} />}</Stack.Screen>
-        <Stack.Screen name="Statistics">{props => <Statistics {...props} />}</Stack.Screen>
+        <Stack.Screen name="About">{props => <About {...props} />}</Stack.Screen>
         <Stack.Screen name="Settings">{props => <Settings {...props} />}</Stack.Screen>
+        <Stack.Screen name="ScheduleDays">{props => <ScheduleDays {...props} />}</Stack.Screen>
+        <Stack.Screen name="ScheduleHours">{props => <ScheduleHours {...props} />}</Stack.Screen> 
+        <Stack.Screen name="ScheduleInfo">{props => <ScheduleInfo {...props} />}</Stack.Screen>
       </Stack.Navigator>
     </Animated.View>
   );
@@ -52,17 +60,6 @@ const DrawerContent = props => {
     <DrawerContentScrollView {...props} scrollEnabled={false} contentContainerStyle={{ flex: 1 }}>
       <Block>
         <Block flex={0.4} margin={20} bottom>
-          {/* <Image
-            // source={{
-            //   uri: 'https://react-ui-kit.com/assets/img/react-ui-kit-logo-green.png',
-            //   height: 60,
-            //   width: 60,
-            //   scale: 0.5,
-            // }}
-
-            resizeMode="center"
-            style={styles.avatar}
-          /> */}
           <Icon name="user"  size ={60} color="#fff"/>
           <Text white title>
             User
@@ -94,11 +91,11 @@ const DrawerContent = props => {
             icon={() => <AntDesign name="calendar" color="white" size={18} />}
           />
            <DrawerItem
-            label="Statistics"
+            label="About"
             labelStyle={{ color: 'white', marginLeft: -16 }}
             style={{ alignItems: 'flex-start', marginVertical: 0 }}
-            onPress={() => props.navigation.navigate('Statistics')}
-            icon={() => <AntDesign name="linechart" color="white" size={18} />}
+            onPress={() => props.navigation.navigate('About')}
+            icon={() => <AntDesign name="info" color="white" size={18} />}
           />
           <DrawerItem
             label="Settings"
@@ -115,7 +112,7 @@ const DrawerContent = props => {
           label="Logout"
           labelStyle={{ color: 'white' }}
           icon={() => <AntDesign name="logout" color="white" size={16} />}
-          onPress={() => alert('Are your sure to logout?')}
+          onPress={() => alert('Are you sure ???')}
         />
       </Block>
     </DrawerContentScrollView>
@@ -136,7 +133,7 @@ export default () => {
   const animatedStyle = { borderRadius, transform: [{ scale }] };
 
   return (
-    <LinearGradient style={{ flex: 1 }} colors={['#E94057', '#4A00E0']}>
+     <LinearGradient style={{ flex: 1 }} colors={['#1e232e', '#1e232e']}>  
       <Drawer.Navigator
         // hideStatusBar
         drawerType="slide"
